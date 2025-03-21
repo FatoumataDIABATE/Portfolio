@@ -1,10 +1,10 @@
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
-import Education from "@/components/education";
+import Veille from "@/components/veille";
 import Intro from "@/components/intro";
-import Projects from "@/components/projects";
+import Projets from "@/components/projets";
 import SectionDivider from "@/components/section-divider";
-import Skills from "@/components/skills";
+import Competences from "@/components/competences";
 
 export default function Home() {
   return (
@@ -12,10 +12,10 @@ export default function Home() {
       <Intro />
       <div className="flex flex-col items-center px-4">
         <SectionDivider />
-        <Projects />
-        <Skills />
+        <Projets />
+        <Competences />
         <Experience />
-        <Education />
+        <Veille />
         <Contact />
       </div>
     </main>

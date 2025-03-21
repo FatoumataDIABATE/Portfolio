@@ -50,7 +50,7 @@ export default function Project({
           <h3 className="text-2xl font-semibold mb-4">{title}</h3>
           <ul className="flex flex-wrap gap-2 mb-3 sm:mt-auto">
             <p className="font-bold text-gray-500 dark:text-white/70">
-              Made with:{" "}
+              Technos :{" "}
             </p>
             {icons.map((icon, iconIndex) => (
               <Icon key={iconIndex} icon={icon} className="mr-3 text-2xl" />
@@ -71,16 +71,6 @@ export default function Project({
               </a>
             )}
 
-            {demoLink && (
-              <a
-                href={demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"
-              >
-                <AiFillYoutube className="mr-1" /> Demo
-              </a>
-            )}
 
             {githubLink && (
               <a

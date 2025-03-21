@@ -10,6 +10,8 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { FaFilePdf } from "react-icons/fa";
+import { Icon } from '@iconify/react';
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
@@ -17,8 +19,9 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My experience</SectionHeading>
+      <SectionHeading>Mes Expériences Professionnelles</SectionHeading>
       <VerticalTimeline lineColor="">
+
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -48,6 +51,32 @@ export default function Experience() {
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
+                {item.technos && item.technos.length > 0 && (
+                    <div className="flex flex-wrap gap-3 mt-4">
+                        {item.technos.map((tech, idx) => (
+                            <div key={idx} className="flex items-center gap-1">
+                                <Icon icon={tech.icon} width={24} height={24} />
+                                <span className="text-sm">{tech.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {item.reportUrl && (
+                    <div className="mt-4 flex justify-center">
+                        <a
+                            href={item.reportUrl}
+                            className="group bg-gray-950 text-white px-5 py-2 inline-flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border border-white/40"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span className="opacity-70 whitespace-nowrap">Mon Rapport de stage</span>
+                            <FaFilePdf className="opacity-70" />
+                        </a>
+                    </div>
+                )}
+
+
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

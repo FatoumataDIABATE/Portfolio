@@ -25,16 +25,16 @@ const growOnHover = {
   scale: 1.2,
 };
 
-export default function Skills() {
-  const { ref } = useSectionInView("Skills");
+export default function Competences() {
+  const { ref } = useSectionInView("Competences");
 
   return (
     <section
-      id="skills"
+      id="competences"
       ref={ref}
       className="mb-28 max-w-[58rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My Skills</SectionHeading>
+      <SectionHeading>Mes Compétences</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
