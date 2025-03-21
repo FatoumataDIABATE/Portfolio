@@ -31,7 +31,7 @@ export default function Intro() {
               duration: 0.2,
             }}
           >
-            <Image
+            {/*<Image
               src={githubdp}
               alt="Ricardo portrait"
               width="192"
@@ -39,7 +39,7 @@ export default function Intro() {
               quality="95"
               priority={true}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-            />
+            />*/}
           </motion.div>
 
           <motion.span
@@ -63,9 +63,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ben.</span> I'm a{" "}
-        <span className="font-bold">software engineer</span> at{" "}
-        <span className="font-bold">Humanforce</span> in Brisbane. I'm currently working with Laravel, React.js, GraphQL, and AWS.
+        <span className="font-bold">Salut, Je m'appelle Fatoumata.</span> Je suis{" "}
+        <span className="font-bold">une étudiante en informatique </span> a{" "}
+        <span className="font-bold">à l'EPSI</span> et je suis passionnée par le monde du numérique.
       </motion.h1>
 
       <motion.div
@@ -78,7 +78,7 @@ export default function Intro() {
       >
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack text-gray-950"
-          href="https://github.com/ben04rogers"
+          href="https://github.com/FatoumataDIABATE"
           target="_blank"
         >
           GitHub <FaGithub className="opacity-70" />
@@ -86,7 +86,7 @@ export default function Intro() {
 
         <a
           className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
-          href="https://www.linkedin.com/in/ben-rogers-dev/"
+          href="https://www.linkedin.com/in/fatoumata-diabate/"
           target="_blank"
         >
           <span className="opacity-70">LinkedIn</span>
